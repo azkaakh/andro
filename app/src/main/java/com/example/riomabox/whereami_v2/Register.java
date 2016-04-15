@@ -1,4 +1,4 @@
-package com.example.user.registerlogin;
+package com.example.riomabox.whereami_v2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -53,4 +53,5 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         });
     }
 }
+
 

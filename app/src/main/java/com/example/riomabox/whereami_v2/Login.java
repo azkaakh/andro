@@ -1,4 +1,4 @@
-package com.example.user.registerlogin;
+package com.example.riomabox.whereami_v2;
 
 import android.app.AlertDialog;
 import android.content.Intent;

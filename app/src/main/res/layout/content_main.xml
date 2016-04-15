@@ -1,58 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main" tools:context="com.example.user.registerlogin.MainActivity">
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:showIn="@layout/activity_main"
+    tools:context="com.example.riomabox.whereami_v2.MainActivity">
 
-    <TextView
+    <!--<TextView
+        android:id="@+id/textViewTitle1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"/>
-
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Where Am I"
+        android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/textViewTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Age"/>
+        android:layout_below="@+id/textViewTitle1"
+        android:layout_centerHorizontal="true"
+        android:text="GPS Tracker"
+        android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/etAge"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_below="@id/textViewTitle2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/button_shape"
+        android:contentDescription="Where Am I Logo" /> -->
+
+    <!-- android:layout_below="@+id/logo" -->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutGPS"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textViewGpsStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service not started"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"/>
+        <LinearLayout
+            android:id="@+id/linearLayoutLat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textViewLatLabel"
+                android:layout_width="144sp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Latitude:"/>
+            <TextView
+                android:id="@+id/textViewLatValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutLon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textViewLonLabel"
+                android:layout_width="144sp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="longitude:"/>
+            <TextView
+                android:id="@+id/textViewLonValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+       <!-- <LinearLayout
+            android:id="@+id/linearLayoutAlt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textViewAltLabel"
+                android:layout_width="144sp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Altitude"/>
+            <TextView
+                android:id="@+id/textViewAltValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Unspecified" />
+        </LinearLayout> -->
+        <LinearLayout
+            android:id="@+id/linearLayoutAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textViewAccLabel"
+                android:layout_width="144sp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Accuracy"/>
+            <TextView
+                android:id="@+id/textViewAccValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <!--<LinearLayout
+            android:id="@+id/linearLayoutHost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textViewHostLabel"
+                android:layout_width="144sp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Tracker Address"/>
+            <TextView
+                android:id="@+id/textViewHostValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Unspecified" />
+        </LinearLayout>-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"/>
+       <!-- <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Where Am I?"
+            android:id="@+id/buttonTrack"
+            android:layout_gravity="center_horizontal"
+            android:onClick="click"/> -->
+        <Button
+            android:id="@+id/buttonTrack"
 
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        />
+            android:text="Where am I?"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginTop="40sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_shape"
+            android:layout_gravity="center_horizontal"
+            android:onClick="click" />
+        <Button
+            android:id="@+id/button"
 
-
-
-
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_marginTop="10sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_shape"
+            android:layout_gravity="center_horizontal"
+            android:onClick="insert" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewResult" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/bLogout"
         android:text="Logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

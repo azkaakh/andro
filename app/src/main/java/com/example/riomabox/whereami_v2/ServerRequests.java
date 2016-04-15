@@ -1,7 +1,7 @@
-package com.example.user.registerlogin;
+package com.example.riomabox.whereami_v2;
 
 /**
- * Created by user on 07/03/2016.
+ * Created by user on 12/04/2016.
  */
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -74,7 +74,7 @@ public class ServerRequests {
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
 
             HttpClient client = new DefaultHttpClient(httpRequestParams);
-            HttpPost post = new HttpPost(SERVER_ADDRESS+ "Register.php");
+            HttpPost post = new HttpPost(SERVER_ADDRESS+ "RegisterKomber.php");
             try {
                 post.setEntity(new UrlEncodedFormEntity(dataToSend));
                 try {
@@ -127,7 +127,7 @@ public class ServerRequests {
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
 
             HttpClient client = new DefaultHttpClient(httpRequestParams);
-            HttpPost post = new HttpPost(SERVER_ADDRESS+ "FetchUserData.php");
+            HttpPost post = new HttpPost(SERVER_ADDRESS+ "FetchUserDataKomber.php");
 
 
             try {

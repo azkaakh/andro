@@ -1,7 +1,7 @@
-package com.example.user.registerlogin;
+package com.example.riomabox.whereami_v2;
 
 /**
- * Created by user on 07/03/2016.
+ * Created by user on 12/04/2016.
  */
 public class User {
     String name, username,password;
@@ -22,3 +22,4 @@ public class User {
 
     }
 }
+
